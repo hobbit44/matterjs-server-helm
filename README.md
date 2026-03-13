@@ -3,7 +3,7 @@
 # matterjs-server
 
 ![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fmatter-js%2Fmatterjs-server%2Freleases%2Flatest&query=%24.name&label=Version)![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
-![AppVersion](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fmatter-js%2Fmatterjs-serverreleases%2Flatest&query=%24.name&label=Version)
+![AppVersion](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fmatter-js%2Fmatterjs-server%2Freleases%2Flatest&query=%24.name&label=Version)
 
 matterjs-server Helm chart for Kubernetes
 
