@@ -1,0 +1,46 @@
+{{ define "chart.versionBadge" -}}
+{{- $releaseEndpoint := urlquery "https://api.github.com/repos/matter-js/matterjs-server/releases/latest" }}
+{{- $releaseNameQuery := urlquery "$.name" }}
+![Version](https://img.shields.io/badge/dynamic/json?url={{ $releaseEndpoint }}&query={{ $releaseNameQuery }}&label=Version) 
+{{- end }}
+{{ define "chart.appVersionBadge" -}}
+{{- $releaseEndpoint := urlquery "https://api.github.com/repos/matter-js/matterjs-serverreleases/latest" }}
+{{- $releaseNameQuery := urlquery "$.name" }}
+![AppVersion](https://img.shields.io/badge/dynamic/json?url={{ $releaseEndpoint }}&query={{ $releaseNameQuery }}&label=Version) 
+{{- end }}
+
+{{ template "chart.header" . }}
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.badgesSection" . }}
+
+{{ template "chart.description" . }}
+
+
+### Installing the Chart
+To install the chart with the release name my-release:
+
+```
+helm install my-release oci://ghcr.io/hobbit44/matterjs-server-helm/matterjs-server
+```
+
+### Uninstalling the Chart
+To uninstall/delete the my-release deployment:
+
+```
+helm delete my-release
+```
+The command removes all the Kubernetes components associated with the chart and deletes the release.
+
+{{ template "chart.sourcesSection" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+{{ template "chart.valuesSection" . }}
+
+### Todo
+
+- [ ] Add database provider charts as dependencies
+- [ ] Seperate front and backend to seperate deployments
+
+{{ template "helm-docs.versionFooter" . }}

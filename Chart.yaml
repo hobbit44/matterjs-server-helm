@@ -1,0 +1,13 @@
+apiVersion: v2
+name: matterjs-server
+description: matterjs-server Helm chart for Kubernetes
+home: https://github.com/hobbit44/matterjs-server-helm
+icon: https://github.com/matter-js/matterjs-server/raw/main/docs/matter_logo.svg
+type: application
+sources:
+  - https://github.com/matter-js/matterjs-server
+  - https://github.com/hobbit44/matterjs-server-helm
+# renovate: image=ghcr.io/matter-js/matterjs-server
+appVersion: "v0.5.6"
+version: 0.0.1
+

@@ -1,0 +1,10 @@
+{{- if not .Values.existingConfigMap }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "matterjs-server.fullname" . }}-config
+data:
+  {{- range $key := keys .Values.config }}
+  {{ $key | snakecase | upper }}: {{ get $.Values.config $key }}
+  {{- end }}
+{{- end }}
